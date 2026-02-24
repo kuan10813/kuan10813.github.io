@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เทคโนโลยี</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    /* แถบหัวข้อด้านบน */
+    .header {
+      background-color: #f8a8c8; /* ชมพู */
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      padding: 20px;
+      color: #fff;
+      -webkit-text-stroke: 1.5px #000; /* ขอบดำ */
+      border-bottom: 2px solid #fff;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 88px);
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    /* เส้นแบ่ง */
+    .divider {
+      width: 2px;
+      background-color: #ffffff;
+    }
+
+    /* หัวข้อหน่วย (กดไม่ได้) */
+    .unit-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ข้อย่อย (กดได้) */
+    .unit-item {
+      margin-left: 20px;
+      cursor: pointer;
+      color: #000;
+      text-decoration: underline;
+      margin-bottom: 8px;
+    }
+
+    .unit-item:hover {
+      color: #555;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- หัวข้อใหญ่ -->
+  <div class="header">เทคโนโลยี</div>
+
+  <div class="container">
+    <!-- ฝั่งซ้าย -->
+    <div class="left">
+
+      <div class="unit-title">หน่วยที่ 1</div>
+      <div class="unit-item" onclick="showUnit('1 1.html')">
+        ความหมายของเทคโนโลยี
+      </div>
+<div class="unit-item" onclick="showUnit('1 2.html')">
+  วิวัฒนาการเทคโนโลยี
+</div>
+<div class="unit-item" onclick="showUnit('1 3.html')">
+  ความสำคัญของเทคโนโลยี
+</div>
+<div class="unit-item" onclick="showUnit('1 4.html')">
+  ปัจจัยที่ทำให้เกิดเทคโนโลยี
+</div>
+
+      <div class="unit-title">หน่วยที่ 2</div>
+      <div class="unit-item" onclick="showUnit('2 1.html')">
+       ปัจจัยการยอมรับเทคโนโลยี
+      </div>
+<div class="unit-item" onclick="showUnit('2 2.html')">
+  ปัจจัยที่ทำให้เทคโนโลยีเปลี่ยนแปลง
+</div>
+<div class="unit-item" onclick="showUnit('2 3.html')">
+  ผลการกรทบจากการเปลี่ยนแปลงเทคโนโลยที่มีต่อมนุษย์
+</div>
+
+    </div>
+
+    <!-- เส้นแบ่ง -->
+    <div class="divider"></div>
+
+    <!-- ฝั่งขวา -->
+    <div class="right">
+      <iframe id="contentFrame"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function showUnit(url) {
+      document.getElementById("contentFrame").src = url;
+    }
+  </script>
+
+</body>
+</html>
